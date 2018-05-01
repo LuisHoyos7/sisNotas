@@ -10,6 +10,8 @@ use App\Repositories\SeguimientoRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use App\Models\Periodo;
+use App\Models\Seguimiento;
 
 class SeguimientoController extends AppBaseController
 {
@@ -22,14 +24,39 @@ class SeguimientoController extends AppBaseController
     }
 
 
-    public function index(SeguimientoDataTable $seguimientoDataTable)
+    public function index(SeguimientoDataTable $seguimientoDataTable,$id_periodo="")
     {
-        return $seguimientoDataTable->render('seguimientos.index');
+        if($id_periodo == "")
+        {
+
+            return $seguimientoDataTable->render('seguimientos.index');
+
+        }
+        else
+        {  
+             
+            $periodo               = Periodo::where("id",$id_periodo)->first();
+            $seguimiento  = \DB::table('seguimientos as seg')
+                                    ->join('periodos as per', 'p.id', '=', 'seg.id_per')
+                                    ->select('seg.*', 'per.*')
+                                    ->where("seg.id_per",$id_periodo)
+                                    ->get();
+
+            return view('seguimientos.index')
+                                    ->with('seguimiento',$seguimiento)
+                                    ->with("periodo",$periodo)
+                                    ->with("id_periodo",$id_periodo);
+                                    
+        }
+        
     }
 
-    public function create()
+    public function create($id_periodo="")
     {
-        return view('seguimientos.create');
+        $periodo          = Periodo::where("id",$id_periodo)->first();
+        return view('seguimientos.create')
+                                    ->with("periodo",$periodo)
+                                    ->with("id_periodo",$id_periodo);
     }
 
  

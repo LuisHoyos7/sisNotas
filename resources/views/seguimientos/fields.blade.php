@@ -1,8 +1,9 @@
 <!-- Id Per Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('id_per', 'Id Per:') !!}
-    {!! Form::text('id_per', null, ['class' => 'form-control']) !!}
-</div>
+
+<strong>Periodo: {{$periodo->id_per}} </strong>
+
+<input class="input-sm" type="hidden" id="id_per" name="id_per" value="{{$periodo->id}}">
+
 
 <!-- Nombre Seg Field -->
 <div class="form-group col-sm-6">

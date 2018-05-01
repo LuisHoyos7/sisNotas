@@ -33,13 +33,8 @@ Route::resource('periodos', 'PeriodoController');
 
 Route::resource('seguimientos', 'SeguimientoController');
 
-Route::resource('areas', 'AreaController');
-
-Route::resource('grupos', 'GrupoController');
-
-Route::resource('cursos', 'CursoController');
-
-Route::resource('detalleNotas', 'DetalleNotasController');
+Route::get('seguimientos/index/{id}', 'SeguimientoController@index');
+Route::get('seguimientos/create/{id}', 'SeguimientoController@create');
 
 
 
@@ -49,7 +44,8 @@ Route::resource('detalleNotas', 'DetalleNotasController');
 
 
 
-Route::post('/import-excel', 'DataController@importData');
+
+Route::post('/import-file', 'DataController@importFile')->name('import.file');
 
 
 
