@@ -4,6 +4,7 @@
     <p>{!! $seguimiento->id !!}</p>
 </div>
 
+
 <!-- Id Per Field -->
 <div class="form-group">
     {!! Form::label('id_per', 'Id Per:') !!}

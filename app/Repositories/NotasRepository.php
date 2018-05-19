@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class NotasRepository
  * @package App\Repositories
- * @version April 24, 2018, 7:07 am UTC
+ * @version May 9, 2018, 3:44 am UTC
  *
  * @method Notas findWithoutFail($id, $columns = ['*'])
  * @method Notas find($id, $columns = ['*'])
@@ -38,4 +38,6 @@ class NotasRepository extends BaseRepository
     {
         return Notas::class;
     }
+
+    
 }

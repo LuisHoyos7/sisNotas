@@ -24,47 +24,25 @@ class SeguimientoController extends AppBaseController
     }
 
 
-    public function index(SeguimientoDataTable $seguimientoDataTable,$id_periodo="")
+    public function index(SeguimientoDataTable $seguimientoDataTable)
     {
-        if($id_periodo == "")
-        {
-
-            return $seguimientoDataTable->render('seguimientos.index');
-
-        }
-        else
-        {  
-             
-            $periodo               = Periodo::where("id",$id_periodo)->first();
-            $seguimiento  = \DB::table('seguimientos as seg')
-                                    ->join('periodos as per', 'p.id', '=', 'seg.id_per')
-                                    ->select('seg.*', 'per.*')
-                                    ->where("seg.id_per",$id_periodo)
-                                    ->get();
-
-            return view('seguimientos.index')
-                                    ->with('seguimiento',$seguimiento)
-                                    ->with("periodo",$periodo)
-                                    ->with("id_periodo",$id_periodo);
-                                    
-        }
+        return $seguimientoDataTable->render('seguimientos.index');
         
     }
 
-    public function create($id_periodo="")
-    {
-        $periodo          = Periodo::where("id",$id_periodo)->first();
-        return view('seguimientos.create')
-                                    ->with("periodo",$periodo)
-                                    ->with("id_periodo",$id_periodo);
+    public function create()
+    {   
+       $periodo = Periodo::all();
+        return view('seguimientos.create',compact('periodo'));
     }
 
  
     public function store(CreateSeguimientoRequest $request)
     {
+        $periodo = Periodo::all();
         $input = $request->all();
 
-        $seguimiento = $this->seguimientoRepository->create($input);
+        $seguimiento = $this->seguimientoRepository->create($input,$periodo);
 
         Flash::success('Seguimiento Guardado Exitosamente.');
 

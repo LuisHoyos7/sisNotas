@@ -53,10 +53,17 @@ Route::post('/import-file', 'DataController@importFile')->name('import.file');
 
 
 
+
+
+
+
+
+
+Route::get('data')->name('importar');
+
+
+
+
 Route::resource('notas', 'NotasController');
 
-
-
-
-
-Route::get('data');
+Route::get('descargar-notas', 'NotasController@pdf')->name('pdf');

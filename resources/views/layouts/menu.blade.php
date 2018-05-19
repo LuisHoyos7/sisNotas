@@ -7,3 +7,6 @@
     <a href="{!! route('notas.index') !!}"><i class="fa fa-edit"></i><span>Deatalle Notas</span></a>
 </li>
 
+
+
+

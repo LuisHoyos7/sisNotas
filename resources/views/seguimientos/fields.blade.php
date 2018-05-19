@@ -2,7 +2,12 @@
 
 <div class="form-group col-sm-6">
     {!! Form::label('id_per', 'Id Per:') !!}
-    {!! Form::text('id_per', null, ['class' => 'form-control']) !!}
+    <select class="form-control" id="id_per" name="id_per" >
+                    
+      @foreach($periodo as $filas)
+             <option value="{{ $filas->id }}">{{ $filas->nombre_per}}</option>  
+      @endforeach
+   </select>
 </div>
 
 
