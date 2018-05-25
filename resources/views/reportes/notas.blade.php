@@ -1,5 +1,20 @@
 <table class="table table-responsive" id="notas-table">
-    <thead>
+        
+    <style>
+       
+        
+th{
+    background: green;
+}
+
+    </style>
+   
+
+    <thead> 
+        <div class="espacio">
+          <img src="Unicordoba.png">
+        </div>
+       
         <tr>
         <th>Id Asignatura</th>
         <th>Asignatura</th>
