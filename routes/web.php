@@ -66,4 +66,9 @@ Route::get('data')->name('importar');
 
 Route::resource('notas', 'NotasController');
 
-Route::get('descargar-notas', 'NotasController@pdf')->name('pdf');
+Route::get('descargar-notas-1er-Cohorte', 'NotasController@pdf')->name('pdf');
+
+
+
+Route::resource('notas2s', 'Notas2Controller');
+Route::get('descargar-notas-2do-Cohorte', 'Notas2Controller@pdf')->name('pdf2');

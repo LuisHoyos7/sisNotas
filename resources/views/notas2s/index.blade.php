@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-      <h1 class="pull">Notas del Primer Cohorte
+   <section class="content-header">
+      <h1 class="pull">Notas Del Segundo Cohorte
 
       </h1>
     </section>
-
 
     <div class="content">
         <div class="clearfix"></div>
@@ -15,15 +14,12 @@
 
         <div class="clearfix"></div>
         <div class="box box-primary">
-         <h1>
-         
-        </h1>
             <div class="box box-header">
             <div class="row ">
 
             
     
-            {{Form::open(['route' => 'notas.index','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
+            {{Form::open(['route' => 'notas2s.index','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
 
             <div class="col-md-2">
                 <select class="form-control" id="id_asignatura" name="id_asignatura" placeholder = "ASIGNATURA">
@@ -60,7 +56,7 @@
                    PDF
               </a>
 
-              <a  type="submit" class="btn btn-default" href="{{route('notas.index')}}">
+              <a  type="submit" class="btn btn-default" href="{{route('notas2s.index')}}">
                 <i class="fa fa-fw fa-undo"></i> Resetear
               </a>
             </div>
@@ -71,14 +67,11 @@
             </div>
             </div>
             <div class="box-body">
-                    @include('notas.table')
+                    @include('notas2s.table')
             </div>
         </div>
         <div class="text-center">
         
-
-        @include('adminlte-templates::common.paginate', ['records' => $notas])
-
         </div>
     </div>
 @endsection
