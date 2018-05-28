@@ -2,11 +2,10 @@
 
 @section('content')
    <section class="content-header">
-      <h1 class="pull">Notas Del Segundo Cohorte
+      <h1 class="pull">Notas Del Tercer Cohorte Cohorte
 
       </h1>
     </section>
-
     <div class="content">
         <div class="clearfix"></div>
 
@@ -19,7 +18,7 @@
 
             
     
-            {{Form::open(['route' => 'notas2s.index','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
+            {{Form::open(['route' => 'notas3s.index','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
 
             <div class="col-md-2">
                 <select class="form-control" id="id_asignatura" name="id_asignatura">
@@ -52,7 +51,7 @@
                 <span class="glyphicon glyphicon-search"></span>
             </button>
 
-             <a href="{{ route('pdf2') }}" type="submit" class="btn btn-default">
+             <a href="{{ route('pdf3') }}" type="submit" class="btn btn-default">
                    PDF
               </a>
 
@@ -67,7 +66,7 @@
             </div>
             </div>
             <div class="box-body">
-                    @include('notas2s.table')
+                    @include('notas3s.table')
             </div>
         </div>
         <div class="text-center">

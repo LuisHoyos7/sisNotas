@@ -31,7 +31,7 @@ th{
     <tbody>
     @foreach($pdfs as $notas)
         <tr>
-            <td>{!! $notas->id_asignatura !!}</td>
+           <td>{!! $notas->id_asignatura !!}</td>
             <td>{!! $notas->asignatura !!}</td>
             <td>{!! $notas->grupo !!}</td>
             <td>{!! $notas->docente !!}</td>

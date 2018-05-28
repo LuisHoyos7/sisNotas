@@ -10,7 +10,7 @@
     {!! Form::label('estado_per', 'Estado') !!}
     {!! Form::text('estado_per', null, ['class' => 'form-control']) !!}
 </div>
-
+  
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

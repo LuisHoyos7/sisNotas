@@ -38,13 +38,13 @@ class NotasController extends AppBaseController
          $parametro2 = $request->get('parametro2');
          
 
-         $notas = Notas::orderBy('id','DESC')
+         $notas = Notas::orderBy('asignatura','ASC')
          ->id($id_asignatura)
          ->grupo($grupo)
          ->corte1($parametro1,$parametro2)
          ->paginate(10);
 
-         $pdfs = Notas::orderBy('id','DESC')
+         $pdfs = Notas::orderBy('asignatura','ASC')
          ->id($id_asignatura)
          ->grupo($grupo)
          ->corte1($parametro1,$parametro2)

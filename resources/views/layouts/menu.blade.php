@@ -14,3 +14,7 @@
     <a href="{!! route('notas2s.index') !!}"><i class="fa fa-edit"></i><span>Detalle Notas Cohorte II</span></a>
 </li>
 
+<li class="{{ Request::is('notas3s*') ? 'active' : '' }}">
+    <a href="{!! route('notas3s.index') !!}"><i class="fa fa-edit"></i><span>Detalle Notas Cohorte III</span></a>
+</li>
+

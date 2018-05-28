@@ -1,0 +1,112 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+     
+    {
+        "name": "id_asignatura",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+
+
+    {
+        "name": "asignatura",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+
+    {
+        "name": "grupo",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "docente",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+
+    {
+        "name": "id_estudiante",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "estudiante",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true
+    },
+
+
+    {
+        "name": "corte1",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true
+    },
+
+
+    {
+        "name": "corte2",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true
+    },
+
+
+    {
+        "name": "corte3",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true
+    },
+
+
+    
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]
