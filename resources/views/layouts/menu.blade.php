@@ -18,3 +18,7 @@
     <a href="{!! route('notas3s.index') !!}"><i class="fa fa-edit"></i><span>Detalle Notas Cohorte III</span></a>
 </li>
 
+<li class="{{ Request::is('reporte*') ? 'active' : '' }}">
+    <a href="{!! route('reportes') !!}"><i class="fa fa-edit"></i><span>Reportes Chorte I</span></a>
+</li>
+
