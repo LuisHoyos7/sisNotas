@@ -40,13 +40,34 @@ class SeguimientoController extends AppBaseController
     public function store(CreateSeguimientoRequest $request)
     {
         $periodo = Periodo::all();
+
         $input = $request->all();
 
         $seguimiento = $this->seguimientoRepository->create($input,$periodo);
 
         Flash::success('Seguimiento Guardado Exitosamente.');
+        $seguimiento_id = Seguimiento::find($seguimiento->id);
+       
 
-        return view('data');
+        
+
+        if ($seguimiento_id->id == 1) {
+            return view('data');
+        }else{
+
+             if ($seguimiento_id->id == 2) {
+            return view('data1');
+        }else{
+             if ($seguimiento_id->id == 3) {
+            return view('data2');
+        }else{
+            return redirect(route('seguimientos.index'));
+        }
+
+        }
+
+        }
+        
     }
 
     public function show($id)
@@ -64,6 +85,7 @@ class SeguimientoController extends AppBaseController
 
     public function edit($id)
     {
+
         $seguimiento = $this->seguimientoRepository->findWithoutFail($id);
 
         if (empty($seguimiento)) {
@@ -71,8 +93,8 @@ class SeguimientoController extends AppBaseController
 
             return redirect(route('seguimientos.index'));
         }
-
-        return view('seguimientos.edit')->with('seguimiento', $seguimiento);
+         $periodo = Periodo::all();
+        return view('seguimientos.edit',compact('periodo'))->with('seguimiento', $seguimiento);
     }
 
     public function update($id, UpdateSeguimientoRequest $request)
@@ -88,8 +110,8 @@ class SeguimientoController extends AppBaseController
         $seguimiento = $this->seguimientoRepository->update($request->all(), $id);
 
         Flash::success('Seguimiento Actualizado Exiotasamente.');
-
-        return redirect(route('seguimientos.index'));
+         $periodo = Periodo::all();
+        return redirect(route('seguimientos.index',compact('periodo')));
     }
 
     public function destroy($id)

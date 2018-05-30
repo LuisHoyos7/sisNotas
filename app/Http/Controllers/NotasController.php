@@ -31,26 +31,20 @@ class NotasController extends AppBaseController
      */
     public function index(Request $request)
     {
-        /**
-        $this->notasRepository->pushCriteria(new RequestCriteria($request));
-        $notas = $this->notasRepository->paginate(6);
-
-        return view('notas.index')
-            ->with('notas', $notas);
-            */
+       
          $id_asignatura = $request->get('id_asignatura');
          $grupo = $request->get('grupo');
          $parametro1 = $request->get('parametro1');
          $parametro2 = $request->get('parametro2');
          
 
-         $notas = Notas::orderBy('id','DESC')
+         $notas = Notas::orderBy('asignatura','ASC')
          ->id($id_asignatura)
          ->grupo($grupo)
          ->corte1($parametro1,$parametro2)
          ->paginate(10);
 
-         $pdfs = Notas::orderBy('id','DESC')
+         $pdfs = Notas::orderBy('asignatura','ASC')
          ->id($id_asignatura)
          ->grupo($grupo)
          ->corte1($parametro1,$parametro2)
@@ -182,10 +176,6 @@ class NotasController extends AppBaseController
 
       public function pdf(Request $request)
     {        
-       
-         
-         
-
         $pdf = PDF::loadView('reportes.notas', session('search'));
         return $pdf->stream();
         //return $pdf->download('listado.pdf');

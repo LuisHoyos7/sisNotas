@@ -7,11 +7,11 @@
 
 	<div class="box box-default">
 		<div class="box-header">
-		A continuacion suba su archivo en Formato XLSX primer COHORTE
+		A continuacion suba su archivo en Formato XLSX del segundo COHORTE 
 	   </div>
   <div class="box-body"> 
   	<center>
-       {!! Form::open(array('route' => 'import.file','method'=>'POST','files'=>'true')) !!}
+       {!! Form::open(array('route' => 'import.file2','method'=>'POST','files'=>'true')) !!}
    <div class="col-xs-8 col-sm-8 col-md-8">
         <div class="form-group">
 		{!! Form::label('sample_file','Select File to Import:',['class'=>'col-md-3']) !!}
@@ -29,7 +29,6 @@
   <div class="col-xs-8 col-sm-8 col-md-8"><br>
 
             {!! Form::submit('Cargar',['class'=>'btn btn-success']) !!}
-            {!! Form::submit('Cancelar',['route' => 'notas.index','class'=>'btn btn-default']) !!}
 
             </div>
 

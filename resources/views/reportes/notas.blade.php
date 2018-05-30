@@ -181,7 +181,7 @@
            
        
         <tr>
-        <th>Id Asignatura</th>
+        <th>Id Asignatura</th>    
         <th>Asignatura</th>
         <th>Grupo</th>
         <th>Docente</th>

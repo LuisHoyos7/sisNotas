@@ -46,6 +46,9 @@ Route::get('seguimientos/create/{id}', 'SeguimientoController@create');
 
 
 Route::post('/import-file', 'DataController@importFile')->name('import.file');
+Route::post('/import-file2', 'DataController@importFile2')->name('import.file2');
+Route::post('/import-file3', 'DataController@importFile3')->name('import.file3');
+
 
 
 
@@ -66,4 +69,17 @@ Route::get('data')->name('importar');
 
 Route::resource('notas', 'NotasController');
 
-Route::get('descargar-notas', 'NotasController@pdf')->name('pdf');
+Route::get('descargar-notas-1er-Cohorte', 'NotasController@pdf')->name('pdf');
+
+
+
+Route::resource('notas2s', 'Notas2Controller');
+Route::get('descargar-notas-2do-Cohorte', 'Notas2Controller@pdf')->name('pdf2');
+
+Route::resource('notas3s', 'Notas3Controller');
+Route::get('descargar-notas-3do-Cohorte', 'Notas3Controller@pdf')->name('pdf3');
+
+//reportes de materias
+
+Route::get('reporte', 'ReporteController@reporte')->name('reportes');
+Route::get('reportesMateria/informacionCurso/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso')->name('informe');
