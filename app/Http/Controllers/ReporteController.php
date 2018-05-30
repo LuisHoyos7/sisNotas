@@ -1,10 +1,12 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Detalle;
+use App\Models\Notas;
 use Barryvdh\DomPDF\Facade as PDF;
+
 class ReporteController extends Controller
 {
     

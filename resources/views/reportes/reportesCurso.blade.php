@@ -57,10 +57,12 @@
 	</tr>
 	<tr>
 		<td colspan=3 height="15" align="right"><b><i><font face="Tahoma" color="#000000">Periodo Académico:</font></i></b></td>
-		<td style="border-bottom: 1px solid #000000" align="center"><font face="Tahoma" color="#000000"><br></font></td>
+	    
+		<td style="border-bottom: 1px solid #000000" align="center"><font face="Tahoma" color="#000000"><br></font> 2018-1</td>
+		
 		<td align="left"><font face="Tahoma" color="#000000"><br></font></td>
 		<td colspan=2 align="right"><b><i><font face="Tahoma" color="#000000">Año</font></i></b></td>
-		<td style="border-bottom: 1px solid #000000" align="center"><font face="Tahoma" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000" align="center"><font face="Tahoma" color="#000000"><br></font>2018</td>
 		<td align="left"><font face="Tahoma" color="#000000"><br></font></td>
 	</tr>
 	<tr>
@@ -79,17 +81,21 @@
 		</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="23" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Facultad</font></b></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" colspan=4 align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" colspan=4 align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>INGENIERIAS</td>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center"><b><font face="Tahoma" color="#000000">Programa</font></b></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000"><br></font></b></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000"><br></font></b>INGENIERIA DE SISTEMAS</td>
 		</tr>
 	<tr>
+			
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="31" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Sede</font></b></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000"><br></font></b></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000"><br></font></b>CENTRAL MONTERIA</td>
+		@if (!Auth::guest())
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000"> Coordinador de semestre</font></b></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! Auth::user()->name !!}</td>
+		@endif
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">CC</font></b></td>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
+		
 	</tr>
 	<tr>
 		<td height="17" align="left"><font face="Tahoma" color="#000000"><br></font></td>
@@ -106,6 +112,7 @@
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=9 height="17" align="center" bgcolor="#C0C0C0"><b><font face="Tahoma" color="#000000">2. Información del curso </font></b></td>
 		</tr>
 	<tr>
+		
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 rowspan=2 height="32" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Nombre </font></b></td>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Código</font></b></td>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Grupo</font></b></td>
@@ -115,11 +122,13 @@
 	<tr>
 		</tr>
 	<tr>
-		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
-		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
-		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
+		@foreach($info as $basica)
+		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->asignatura !!}</td>
+		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->id_asignatura !!}</td>
+		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->grupo !!}</td>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
+		@endforeach
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
@@ -331,8 +340,8 @@
 		<td align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		<td align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 	</tr>
-	<tr>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=9 height="21" align="center" valign=middle bgcolor="#C0C0C0"><b><font face="Tahoma" color="#000000">4. Seguimiento al rendimiento académico de los estudiantes</font></b></td>
+	<tr><br><br>
+		<br><br><br><br><td style= ;"border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000 " colspan=9 height="21" align="center" valign=middle bgcolor="#C0C0C0"><b><font face="Tahoma" color="#000000" >4. Seguimiento al rendimiento académico de los estudiantes</font></b></td>
 		</tr>
 	<tr>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 rowspan=2 height="89" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Fecha de seguimiento</font></b></td>
