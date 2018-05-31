@@ -12,8 +12,9 @@
 	<meta name="changed" content="2014-09-29T17:12:40"/>
 	
 	<style type="text/css">
-		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Calibri"; font-size:x-small }
-		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Cambria"; font-size:x-small; height: 30px;width: 82px;}
+
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em; } 
 		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
 		comment { display:none;  } 
 	</style>
@@ -117,7 +118,7 @@
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Código</font></b></td>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Grupo</font></b></td>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739" rowspan=2 align="center" valign=middle><b><font face="Tahoma" color="#000000">Sem de ubicación</font></b></td>
-		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle><b><font face="Tahoma" color="#000000">N° de Alumnos</font></b></td>
+		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" rowspan=2 align="center" valign=middle><b><font face="Tahoma" color="#000000" >N° de Alumnos</font></b></td>
 	</tr>
 	<tr>
 		</tr>
@@ -128,10 +129,9 @@
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->id_asignatura !!}</td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->grupo !!}</td>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
-		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
-	@endforeach
+		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000" width="800px"><br></font></td>
+		@endforeach
 	</tr>
-		
 	<tr>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
@@ -342,8 +342,8 @@
 		<td align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		<td align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 	</tr>
-	<tr><br><br>
-		<br><br><br><br><td style= ;"border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000 " colspan=9 height="21" align="center" valign=middle bgcolor="#C0C0C0"><b><font face="Tahoma" color="#000000" >4. Seguimiento al rendimiento académico de los estudiantes</font></b></td>
+	<tr>
+<td style= "border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000 " colspan=9 height="21" align="center" valign=middle bgcolor="#C0C0C0"><b><font face="Tahoma" color="#000000" >4. Seguimiento al rendimiento académico de los estudiantes</font></b></td>
 		</tr>
 	<tr>
 		<td style="border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 rowspan=2 height="89" align="center" valign=middle bgcolor="#FFFFFF"><b><font face="Tahoma" color="#000000">Fecha de seguimiento</font></b></td>
@@ -362,8 +362,7 @@
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="left" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
-
-		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=middle><font face="Tahoma" color="#000000"><br></font>{!! $notas->estudiante !!}  {!! $notas->corte1 !!}</td>
+		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=middle><font face="Tahoma" color="#000000"><br></font>{!! $notas->estudiante !!} : {!! $notas->corte1 !!}</td>
 
        
 		</tr>
