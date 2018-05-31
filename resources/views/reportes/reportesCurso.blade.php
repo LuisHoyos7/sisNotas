@@ -121,6 +121,7 @@
 	</tr>
 	<tr>
 		</tr>
+		
 	<tr>
 		@foreach($info as $basica)
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->asignatura !!}</td>
@@ -128,8 +129,9 @@
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font>{!! $basica->grupo !!}</td>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
-		@endforeach
+	@endforeach
 	</tr>
+		
 	<tr>
 		<td style="border-top: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=5 height="30" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle bgcolor="#FFFFFF"><font face="Tahoma" color="#000000"><br></font></td>
@@ -353,13 +355,19 @@
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=top><b><font face="Tahoma" color="#000000">Si</font></b></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=top><b><font face="Tahoma" color="#000000">No</font></b></td>
 		</tr>
+			@foreach($info as $notas)
 	<tr>
+
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 height="41" align="center" valign=middle sdnum="1033;0;DD/MM/YY"><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="left" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
-		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=middle><font face="Tahoma" color="#000000"><br></font></td>
+
+		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=middle><font face="Tahoma" color="#000000"><br></font>{!! $notas->estudiante !!}  {!! $notas->corte1 !!}</td>
+
+       
 		</tr>
+		 @endforeach
 	<tr>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 height="71" align="center" valign=middle><b><i><font face="Tahoma" color="#000000">Justificación</font></i></b></td>
 		<td style="border-bottom: 1px solid #313739; border-right: 1px solid #313739" colspan=7 align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>

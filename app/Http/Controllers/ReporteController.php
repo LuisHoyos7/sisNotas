@@ -21,13 +21,8 @@ class ReporteController extends Controller
 
     public function informacionCurso($ID_ASIGNATURA,$GRUPO,Request $datos){
        
-    
-      
-       
 
-        
-
-        $info = \DB::select("select DISTINCT id_asignatura,asignatura,grupo FROM notas
+        $info = \DB::select("select DISTINCT * FROM notas
             where id_asignatura = '$ID_ASIGNATURA' and grupo = '$GRUPO'
             ORDER BY asignatura");
     
