@@ -83,3 +83,7 @@ Route::get('descargar-notas-3do-Cohorte', 'Notas3Controller@pdf')->name('pdf3');
 
 Route::get('reporte', 'ReporteController@reporte')->name('reportes');
 Route::get('reportesMateria/informacionCurso/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso')->name('informe');
+
+Route::get('reportesMateria/informacionCurso1/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso1')->name('informe1');
+/*
+Route::get('reportesMateria/informacionCurso2/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso')->name('informe2');*/

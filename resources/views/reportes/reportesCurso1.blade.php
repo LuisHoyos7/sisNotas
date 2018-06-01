@@ -408,14 +408,22 @@
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=top><b><font face="Tahoma" color="#000000">Si</font></b></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="center" valign=top><b><font face="Tahoma" color="#000000">No</font></b></td>
 		</tr>
+
+
+    @foreach($info as $notas2)
 	<tr>
+
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 height="28" align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="left" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="left" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" align="left" valign=top><font face="Tahoma" color="#000000"><br></font></td>
-		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=4 align="center" valign=top><font face="Tahoma" color="#000000"><br></font>{!! $notas2->estudiante !!} : {!! $notas2->corte2 !!}</td>
 		</tr>
+	
 	<tr>
+
+		@endforeach
+
 		<td style="border-top: 1px solid #313739; border-bottom: 1px solid #313739; border-left: 1px solid #313739; border-right: 1px solid #313739" colspan=2 height="54" align="center" valign=middle><b><i><font face="Tahoma" color="#000000">Justificación</font></i></b></td>
 		<td style="border-bottom: 1px solid #313739; border-right: 1px solid #313739" colspan=7 align="center" valign=top><font face="Tahoma" color="#000000"><br></font></td>
 		</tr>
