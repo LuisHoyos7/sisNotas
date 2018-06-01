@@ -85,5 +85,5 @@ Route::get('reporte', 'ReporteController@reporte')->name('reportes');
 Route::get('reportesMateria/informacionCurso/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso')->name('informe');
 
 Route::get('reportesMateria/informacionCurso1/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso1')->name('informe1');
-/*
-Route::get('reportesMateria/informacionCurso2/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso')->name('informe2');*/
+
+Route::get('reportesMateria/informacionCurso2/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso2')->name('informe2');

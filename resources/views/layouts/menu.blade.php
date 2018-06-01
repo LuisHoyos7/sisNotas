@@ -19,6 +19,6 @@
 </li>
 
 <li class="{{ Request::is('reporte*') ? 'active' : '' }}">
-    <a href="{!! route('reportes') !!}"><i class="fa fa-edit"></i><span>Reportes Chorte I</span></a>
+    <a href="{!! route('reportes') !!}"><i class="fa fa-edit"></i><span>Reportes</span></a>
 </li>
 

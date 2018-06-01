@@ -73,25 +73,28 @@ class Notas extends Model
     ];
 
  
- public function scopeId($query, $id_asignatura){
+    public function scopeId($query, $id_asignatura){
 
-    if($id_asignatura)
-        return $query->where('id_asignatura', 'LIKE',"%$id_asignatura%");
-}
+        if($id_asignatura) {
+            return $query->where('id_asignatura', $id_asignatura);
+        }
+    }
 
-public function scopeGrupo($query, $grupo){
+    public function scopeGrupo($query, $grupo){
 
-    if($grupo)
-        return $query->where('grupo', 'LIKE',"%$grupo%");
-}
+        if($grupo) {
+            return $query->where('grupo', $grupo);
+        }
+    }
 
-public function scopeCorte1($query, $parametro1,$parametro2){
-      
-    if($parametro1 && $parametro2)
+    public function scopeCorte1($query, $parametro1, $parametro2){
+          
+        if($parametro1 && $parametro2) {
+            return $query->whereBetween('CORTE1',[$parametro1,$parametro2]);
+        }
+            
+
         
-
-        return $query->whereBetween('CORTE1',[$parametro1,$parametro2]);
-    
-}
+    }
 
 }

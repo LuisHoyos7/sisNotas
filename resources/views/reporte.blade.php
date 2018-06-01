@@ -22,22 +22,13 @@
     
             {{Form::open(['route' => 'reportes','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
 
+
             <div class="col-md-2">
-                <select class="form-control" id="id_asignatura" name="id_asignatura">
-                    <option>ASIGNATURA</option>
-                    @foreach($detallesList as $filas)
-                      <option value="{{ $filas->id_asignatura }}" id="{{ $filas->id_asignatura }}">{{ $filas->asignatura}}</option>
-                      @endforeach
-               </select>
+              {!! Form::select('id_asignatura', $asignaturas, null, ['class' => 'form-control', 'id' => 'id_asignatura', 'placeholder' => 'ASIGNATURA']) !!}
             </div>
 
             <div class="col-md-2" >
-                 <select class="form-control" id="grupo" name="grupo" >
-                    <option>GRUPO</option>
-                    @foreach($detallesList as $filas)
-                      <option value="{{ $filas->grupo }}">{{ $filas->grupo}}</option>
-                      @endforeach
-                </select>
+              {!! Form::select('grupo', $grupos, null, ['class' => 'form-control', 'id' => 'grupo', 'placeholder' => 'GRUPO']) !!}
             </div>
 
 
@@ -89,7 +80,7 @@
                           </a>
                     </td>
                        <td width="10px">
-                          <a href="{{ route('informe',[$nota->id_asignatura,$nota->grupo])}}" class="btn btn-block btn-success">
+                          <a href="{{ route('informe2',[$nota->id_asignatura,$nota->grupo])}}" class="btn btn-block btn-success">
                        Cohorte III
                           </a>
                     </td>
