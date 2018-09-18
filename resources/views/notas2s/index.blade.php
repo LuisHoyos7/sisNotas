@@ -22,23 +22,12 @@
             {{Form::open(['route' => 'notas2s.index','method'=> 'GET', 'class' => 'form-inline-pull-right'])}}
 
             <div class="col-md-2">
-                <select class="form-control" id="id_asignatura" name="id_asignatura">
-                    <option>ASIGNATURA</option>
-                    @foreach($detallesList as $filas)
-                      <option value="{{ $filas->id_asignatura }}" id="{{ $filas->id_asignatura }}">{{ $filas->asignatura}}</option>
-                      @endforeach
-               </select>
+              {!! Form::select('id_asignatura', $asignaturas, null, ['class' => 'form-control', 'id' => 'id_asignatura', 'placeholder' => 'ASIGNATURA']) !!}
             </div>
 
             <div class="col-md-2" >
-                 <select class="form-control" id="grupo" name="grupo" >
-                    <option>GRUPO</option>
-                    @foreach($detallesList as $filas)
-                      <option value="{{ $filas->grupo }}">{{ $filas->grupo}}</option>
-                      @endforeach
-                </select>
+              {!! Form::select('grupo', $grupos, null, ['class' => 'form-control', 'id' => 'grupo', 'placeholder' => 'GRUPO']) !!}
             </div>
-
 
             <div class="col-xs-2">
             {{Form::text('parametro1', null,['class' => 'form-control', 'placeholder' =>'NOTA 1'])}}

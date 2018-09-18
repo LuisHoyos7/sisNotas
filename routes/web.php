@@ -48,22 +48,8 @@ Route::get('seguimientos/create/{id}', 'SeguimientoController@create');
 Route::post('/import-file', 'DataController@importFile')->name('import.file');
 Route::post('/import-file2', 'DataController@importFile2')->name('import.file2');
 Route::post('/import-file3', 'DataController@importFile3')->name('import.file3');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('data')->name('importar');
-
+Route::get('limpiarTablas', 'DataController@LimpiarTablas')->name('limpiar');
 
 
 
@@ -87,3 +73,5 @@ Route::get('reportesMateria/informacionCurso/{ID_ASIGNATURA}/{GRUPO}', 'ReporteC
 Route::get('reportesMateria/informacionCurso1/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso1')->name('informe1');
 
 Route::get('reportesMateria/informacionCurso2/{ID_ASIGNATURA}/{GRUPO}', 'ReporteController@informacionCurso2')->name('informe2');
+
+Route::get('Reporte-Grafico-corte1','HomeController@reporte')->name('reporteGrafico1');

@@ -32,7 +32,7 @@
     @yield('css')
 </head>
 
-<body class="skin-green-light sidebar-mini">
+<body class="skin-green-light sidebar-mini" onload="ocultarOnload()">
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
@@ -164,7 +164,14 @@
 
      <!--datepiker-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    
+
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+      <link rel="stylesheet" href="{{asset('css/tabs.css')}}">
+      <script src="{{asset('js/gauge.min.js')}}"></script>
+      <script src="{{asset('js/graficas.js')}}"></script>
+   
 
     @yield('scripts')
 </body>

@@ -165,5 +165,20 @@ class DataController extends Controller
 
         return redirect(route('notas3s.index'));      
 
-    } 
+    }
+
+
+    public function LimpiarTablas(){
+
+
+        
+        \DB::table('periodos')->truncate();
+        \DB::table('seguimientos')->truncate();
+        \DB::table('notas')->truncate();
+        \DB::table('notas2s')->truncate();
+        \DB::table('notas3s')->truncate();
+
+        return view('periodos.create');
+
+    }
 }

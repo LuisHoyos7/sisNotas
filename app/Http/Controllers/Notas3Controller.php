@@ -49,12 +49,13 @@ class Notas3Controller extends AppBaseController
          ->corte2($parametro1,$parametro2)
          ->paginate(6000);
 
-         $detallesList = \DB::table('notas3s')->select(['id_asignatura','asignatura' ,'grupo'])->get();
+         $asignaturas = Notas3::orderBy('asignatura')->pluck('asignatura', 'id_asignatura');
+         $grupos = Notas3::orderBy('grupo')->pluck('grupo', 'grupo');
          
 
-         session()->put('search',compact('pdfs','detallesList'));
+         session()->put('search',compact('pdfs','asignaturas','grupos'));
 
-         return view('notas3s.index',compact('notas','detallesList'));
+         return view('notas3s.index',compact('notas','asignaturas','grupos'));
     }
 
     /**

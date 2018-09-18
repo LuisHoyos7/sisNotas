@@ -49,13 +49,16 @@ class NotasController extends AppBaseController
          ->grupo($grupo)
          ->corte1($parametro1,$parametro2)
          ->paginate(6000);
-         $detallesList = \DB::table('notas')->select(['id_asignatura','asignatura' ,'grupo'])->get();
+        
+        $asignaturas = Notas::orderBy('asignatura')->pluck('asignatura', 'id_asignatura');
+        $grupos = Notas::orderBy('grupo')->pluck('grupo', 'grupo');
          
 
-         session()->put('search',compact('pdfs','detallesList'));
+         session()->put('search',compact('pdfs','asignaturas','grupos'));
 
-         return view('notas.index',compact('notas','detallesList'));
+         return view('notas.index',compact('notas','asignaturas','grupos'));
     }
+    
 
     /**
      * Show the form for creating a new Notas.
