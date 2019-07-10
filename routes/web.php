@@ -56,6 +56,9 @@ Route::get('limpiarTablas', 'DataController@LimpiarTablas')->name('limpiar');
 Route::resource('notas', 'NotasController');
 
 Route::get('descargar-notas-1er-Cohorte', 'NotasController@pdf')->name('pdf');
+Route::get('notas-1er-Cohorte-excel', 'NotasController@excel')->name('excel');
+Route::get('notas-2do-Cohorte-excel', 'Notas2Controller@excel')->name('excel2');
+Route::get('notas-3er-Cohorte-excel', 'Notas3Controller@excel')->name('excel3');
 
 
 

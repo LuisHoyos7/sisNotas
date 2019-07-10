@@ -31,10 +31,14 @@ class Notas3Controller extends AppBaseController
      */
     public function index(Request $request)
     {
-         $id_asignatura = $request->get('id_asignatura');
-         $grupo = $request->get('grupo');
-         $parametro1 = $request->get('parametro1');
-         $parametro2 = $request->get('parametro2');
+        session()->put('id_asignatura',$request->get('id_asignatura'));
+        session()->put('grupo',$request->get('grupo'));
+        session()->put('parametro1',$request->get('parametro1'));
+        session()->put('parametro2',$request->get('parametro2'));
+         $id_asignatura = session()->get('id_asignatura');
+         $grupo = session()->get('grupo');
+         $parametro1 = session()->get('parametro1');
+         $parametro2 = session()->get('parametro2');
          
 
          $notas = Notas3::orderBy('id','DESC')
@@ -48,6 +52,13 @@ class Notas3Controller extends AppBaseController
          ->grupo($grupo)
          ->corte2($parametro1,$parametro2)
          ->paginate(6000);
+         
+         $excel = Notas3::orderBy('asignatura','ASC')
+         ->id($id_asignatura)
+         ->grupo($grupo)
+         ->corte2($parametro1,$parametro2)
+         ->paginate(6000);
+        session()->put('excel',$excel);
 
          $asignaturas = Notas3::orderBy('asignatura')->pluck('asignatura', 'id_asignatura');
          $grupos = Notas3::orderBy('grupo')->pluck('grupo', 'grupo');
@@ -180,4 +191,49 @@ class Notas3Controller extends AppBaseController
         return $pdf->stream();
         //return $pdf->download('listado.pdf');
     }
+
+    public function excel(){
+         // estas dos lineas permiten descargar y abrir el archivo excel sin errores en el formato y la extension de este //
+
+            ob_end_clean (); 
+            ob_start (); 
+            
+           return \Excel::create('LISTADO DE ESTUDIANTES CON NOTAS ENTRE '.session()->get('parametro1').' Y '.session()->get('parametro2'), function($excel)   {
+                
+            $excel->sheet('REPORTE_ESTUDIANTES', function ($sheet) {
+            
+            $sheet->mergeCells('A1:D1');
+            $sheet->row(1,['LISTADO DE ESTUDIANTES']);
+            $sheet->ROW(2,['ID_ASIGNATURA','ASIGNATURA','GRUPO',
+                           'DOCENTE','ID_ESTUDIANTE','ESTUDIANTE','COHORTE 1','COHORTE 2','COHORTE 3']);
+            
+            $consulta = session()->get('excel');
+            
+
+          
+            foreach($consulta as $cons){
+                    $row = [];
+
+                    $row[0] = $cons->id_asignatura;
+                    $row[1] = $cons->asignatura;
+                    $row[2] = $cons->grupo;
+                    $row[3] = $cons->docente;
+                    $row[4] = $cons->id_estudiante;
+                    $row[5] = $cons->estudiante;
+                    $row[6] = $cons->corte1;
+                    $row[7] = $cons->corte2;
+                    $row[8] = $cons->corte3;
+                        
+                    $sheet->appendRow($row);
+
+            }
+
+            
+        });
+                
+        })->export('XLSX');
+
+    }
 }
+
+

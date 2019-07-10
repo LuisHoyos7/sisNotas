@@ -44,7 +44,9 @@
              <a href="{{ route('pdf2') }}" type="submit" class="btn btn-default">
                    PDF
               </a>
-
+                <a href="{{ route('excel2') }}" type="submit" class="btn btn-default">
+                   EXCEL
+              </a>
               <a  type="submit" class="btn btn-default" href="{{route('notas2s.index')}}">
                 <i class="fa fa-fw fa-undo"></i> Resetear
               </a>

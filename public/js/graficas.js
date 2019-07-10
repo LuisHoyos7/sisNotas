@@ -47,7 +47,7 @@ function ocultar(){
 }
 
 function ocultarOnload(){
-    $(".table").hide()
+    $("#table").hide()
     FormSubmit();
 }
 

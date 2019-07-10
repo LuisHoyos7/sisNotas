@@ -125,6 +125,8 @@ class DataController extends Controller
 
             $data = \Excel::load($path)->get();
 
+            dd($data);
+
 
 
             if($data->count()){

@@ -23,7 +23,7 @@
                 </div>
 
         
-                  <table class="table table-hover "id = "table">
+                  <table class="table table-hover " id = "table">
                     <thead>
                         <tr>
                           <th>Asignatura</th>

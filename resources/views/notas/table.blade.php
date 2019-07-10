@@ -1,4 +1,4 @@
-<table class="table table-responsive" id="notas-table">
+<table class="table table-responsive" id="nota-table">
     <thead>
         
         <tr>
@@ -15,20 +15,20 @@
         </tr>
     </thead>
     <tbody>
-    @foreach($notas as $notas)
+    @foreach($notas as $nota)
         <tr>
-            <td>{!! $notas->id_asignatura !!}</td>
-            <td>{!! $notas->asignatura !!}</td>
-            <td>{!! $notas->grupo !!}</td>
-            <td>{!! $notas->docente !!}</td>
-            <td>{!! $notas->id_estudiante !!}</td>
-            <td>{!! $notas->estudiante !!}</td>
-            <td>{!! $notas->corte1 !!}</td>
-            <td>{!! $notas->corte2 !!}</td>
-            <td>{!! $notas->corte3 !!}</td>
+            <td>{!! $nota->id_asignatura !!}</td>
+            <td>{!! $nota->asignatura !!}</td>
+            <td>{!! $nota->grupo !!}</td>
+            <td>{!! $nota->docente !!}</td>
+            <td>{!! $nota->id_estudiante !!}</td>
+            <td>{!! $nota->estudiante !!}</td>
+            <td>{!! $nota->corte1 !!}</td>
+            <td>{!! $nota->corte2 !!}</td>
+            <td>{!! $nota->corte3 !!}</td>
             <td>
                 <div class='btn-group'>
-                    <a href="{!! route('notas.show', [$notas->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="{!! route('notas.show', [$nota->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     
                 </div>
                 
